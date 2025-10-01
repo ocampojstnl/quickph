@@ -19,7 +19,7 @@ import {
 export default function Features() {
   return (
     <div className="pb-20 flex items-center justify-center">
-      <div className="w-full max-w-(--breakpoint-xl) mx-auto py-12 px-6">
+      <div className="w-full max-w-7xl mx-auto py-12 px-6">
         <h2 className="text-3xl leading-10 sm:text-4xl md:text-[40px] md:leading-13 font-semibold tracking-tight">
          The 3-Step Magic
         </h2>

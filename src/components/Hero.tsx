@@ -7,7 +7,7 @@ import React from "react";
 export default function Hero() {
   return (
     <div className="flex pt-20 pb-5 items-center justify-center">
-      <div className="max-w-(--breakpoint-xl) w-full mx-auto grid lg:grid-cols-2 gap-12 px-6 pb-12">
+      <div className="max-w-7xl w-full mx-auto grid lg:grid-cols-2 gap-12 px-6 pb-12">
         <div>
           <Badge
             variant="secondary"

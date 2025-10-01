@@ -38,7 +38,7 @@ export default async function RentalsCards({ limit }: RentalsCardsProps) {
 
   return (
     <div className="flex py-10 items-center justify-center">
-      <div className="max-w-(--breakpoint-xl) w-full mx-auto">
+      <div className="max-w-7xl w-full mx-auto">
         <div className="flex flex-wrap">
           {displayedRentals.map((r: Rental) => {
             const slug = createSlug(r.name);

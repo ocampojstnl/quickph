@@ -104,7 +104,7 @@ export default function Navigation() {
 
   return (
     <header className="py-4 shadow sticky top-0 z-50 backdrop-blur-sm transition-colors bg-fd-background/80">
-        <div className="max-w-(--breakpoint-xl) mx-auto flex items-center">
+        <div className="max-w-7xl mx-auto flex items-center">
             <SiteLogo/>
             <NavigationMenu className= "mr-auto ml-5" viewport={false}>
                 <NavigationMenuList>

@@ -18,7 +18,7 @@ const Logos07Page = () => {
           More than 2.2 million companies worldwide already trust us
         </p>
 
-        <div className="mt-14 max-w-(--breakpoint-xl) space-y-8">
+        <div className="mt-14 max-w-7xl space-y-8">
           <Marquee
             pauseOnHover
             className="[--duration:40s] [&_svg]:mr-10 mask-x-from-70% mask-x-to-90%"
