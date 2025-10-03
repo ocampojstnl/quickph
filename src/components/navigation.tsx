@@ -151,7 +151,7 @@ export default function Navigation() {
                           {components.map((component) => (
                               <ListItem
                               key={component.title}
-                              href={component.href}
+                              href={"/category/" + encodeURIComponent(component.title.toLowerCase().replace(/\s+/g, '-'))}
                               >
                                 <div className="flex">
                                   <div className="col w-[80%] pr-3">
