@@ -31,7 +31,7 @@ const components: { title: string; href: string; description: string, icon: Reac
     description:
       "Usually 18–30 sqm, single open space with no separate bedroom.",
     icon : HouseIcon, 
-    imageLink : "https://placehold.co/400",
+    imageLink : "/condo-studio.jpg",
   },
   {
     title: "1-Bedroom Unit",
@@ -39,7 +39,7 @@ const components: { title: string; href: string; description: string, icon: Reac
     description:
       "Has one enclosed bedroom, often 30–50 sqm.",
     icon : HouseIcon, 
-    imageLink : "https://placehold.co/400",
+    imageLink : "/1-bedroom.jpg",
 
   },
   {
@@ -48,14 +48,14 @@ const components: { title: string; href: string; description: string, icon: Reac
     description:
       "Larger, typically 40–80 sqm.",
     icon : HouseIcon, 
-    imageLink : "https://placehold.co/400",
+    imageLink : "/2-Bedroomunit.jpg",
   },
   {
     title: "3-Bedroom Unit",
     href: "/docs/primitives/scroll-area",
     description: "For families, often 70 sqm and above.",
     icon : HouseIcon, 
-    imageLink : "https://placehold.co/400",
+    imageLink : "/3-Bedroomunit.jpg",
   },
   {
     title: "Loft Unit",
@@ -63,7 +63,7 @@ const components: { title: string; href: string; description: string, icon: Reac
     description:
       "Has a high ceiling and a mezzanine/second level inside the unit.",
     icon : HouseIcon, 
-    imageLink : "https://placehold.co/400",
+    imageLink : "/condo-lofi.webp",
   },
   {
     title: "Penthouse",
@@ -71,7 +71,7 @@ const components: { title: string; href: string; description: string, icon: Reac
     description:
       "The topmost unit in the building, usually luxury size with best views.",
     icon : HouseIcon, 
-    imageLink : "https://placehold.co/400",
+    imageLink : "/penthouse.jpg",
   },
 ]
 
