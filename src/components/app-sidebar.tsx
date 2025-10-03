@@ -84,19 +84,19 @@ const data = {
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
-    <Sidebar collapsible="icon" {...props}>
-      <SidebarHeader>
-        <Link href="/rentals">
+    <Sidebar className="pt-68px" collapsible="icon" {...props}>
+      <SidebarHeader className="h-[68px]">
+        {/* <Link href="/rentals">
           <TeamSwitcher teams={data.teams} />
-        </Link>
+        </Link> */}
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
         {/* <NavProjects projects={data.projects} /> */}
       </SidebarContent>
-      <SidebarFooter>
+      {/* <SidebarFooter>
         <NavUser user={data.user} />
-      </SidebarFooter>
+      </SidebarFooter> */}
       <SidebarRail />
     </Sidebar>
   )

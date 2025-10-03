@@ -1,7 +1,7 @@
 import { getRentals, deleteRental } from "./rental.actions";
 import { Rental } from "@prisma/client";
 import Navigation from "@/components/navigation";
-import RentalsCards from "@/components/RentCards";
+import RentalsCardsFilter from "../../components/RentalCardsFilter";
 import Footer from "@/components/Footer";
 
 export default async function RentalsPage() {
@@ -9,8 +9,8 @@ export default async function RentalsPage() {
   return (
     <>
       <Navigation />
-      <RentalsCards />
-      <Footer/>
+      <RentalsCardsFilter />
+      {/* <Footer/> */}
     </>
   );
 }

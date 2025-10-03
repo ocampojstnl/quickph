@@ -21,6 +21,7 @@ import { getUserStatus } from "@/app/landlord/register/userStatus.action";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Pencil, Trash2, Eye, Plus } from "lucide-react";
+import Navigation from "@/components/navigation"
 
 export default async function Page() {
   // Check user authentication and landlord status
@@ -43,8 +44,10 @@ export default async function Page() {
   };
 
   return (
-    <SidebarProvider>
-      <AppSidebar />
+    <>
+      <Navigation/>
+      <SidebarProvider className="pt-68px">
+      <AppSidebar/>
       <SidebarInset>
         <header className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-12">
           <div className="flex items-center gap-2 px-4">
@@ -159,6 +162,7 @@ export default async function Page() {
           )}
         </div>
       </SidebarInset>
-    </SidebarProvider>
+      </SidebarProvider>
+    </>
   )
 }

@@ -13,6 +13,8 @@ import {
 import { Separator } from "@/components/ui/separator"
 import { getUserStatus } from "@/app/landlord/register/userStatus.action";
 import { notFound } from "next/navigation";
+import CategoryCombobox from "@/components/CategoryCombobox";
+import Navigation from "@/components/navigation";
 
 export default async function EditRentalPage({
   params,
@@ -52,6 +54,8 @@ export default async function EditRentalPage({
   };
 
   return (
+    <>
+    <Navigation/>
     <SidebarProvider>
       <AppSidebar />
       <SidebarInset>
@@ -127,14 +131,10 @@ export default async function EditRentalPage({
                         <label htmlFor="category" className="block text-sm font-medium text-gray-700">
                           Property Type *
                         </label>
-                        <input
-                          id="category"
+                        <CategoryCombobox
                           name="category"
-                          type="text"
-                          defaultValue={rental.category}
-                          placeholder="e.g., Apartment, House, Condo"
                           required
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 placeholder-gray-400"
+                          className="w-full"
                         />
                       </div>
                     </div>
@@ -313,5 +313,7 @@ export default async function EditRentalPage({
         </div>
       </SidebarInset>
     </SidebarProvider>
+    </>
+    
   );
 }

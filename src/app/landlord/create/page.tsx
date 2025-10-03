@@ -21,6 +21,7 @@ import FormComboBox from "@/components/form-combo";
 import CreateRentalForm from "@/components/CreateRentalForm";
 import { getUserStatus } from "@/app/landlord/register/userStatus.action";
 import { notFound } from "next/navigation";
+import Navigation from "@/components/navigation";
 
 // import { Dropzone, DropzoneContent, DropzoneEmptyState } from '@/components/ui/shadcn-io/dropzone';
 // import { useState } from 'react';
@@ -41,6 +42,8 @@ export default async function Page() {
 //   };
 
   return (
+    <>
+    <Navigation/>
     <SidebarProvider>
       <AppSidebar />
       <SidebarInset>
@@ -73,5 +76,6 @@ export default async function Page() {
         </div>
       </SidebarInset>
     </SidebarProvider>
+    </>
   )
 }
