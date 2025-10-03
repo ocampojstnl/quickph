@@ -1,6 +1,5 @@
 import { createRental } from "../rental.actions";
 import CategoryCombobox from "@/components/CategoryCombobox";
-import ImageGallerySelect from "@/components/ImageGallerySelect";
 
 export default function CreateRentalPage() {
   return (
@@ -160,7 +159,6 @@ export default function CreateRentalPage() {
                 <label htmlFor="images" className="block text-sm font-medium text-gray-700">
                   Select Images *
                 </label>
-                <ImageGallerySelect onImagesSelected={(images) => console.log(images)} />
                 <p className="mt-2 text-sm text-gray-500">
                   Select multiple high-quality images of your property.
                 </p>
