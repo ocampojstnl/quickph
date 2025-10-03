@@ -22,22 +22,7 @@ export async function createRental(data: FormData) {
       userId: currentUserId,
    };
 
-  const files = data.getAll("images") as File[];
-
-  const imagePaths: string[] = [];
-
-  for (const file of files) {
-    const bytes = await file.arrayBuffer();
-    const buffer = Buffer.from(bytes);
-
-    const fileName = Date.now() + "-" + file.name.replace(/\s/g, "_");
-    const filePath = path.join(process.cwd(), "public/uploads", fileName);
-
-    await fs.mkdir(path.dirname(filePath), { recursive: true });
-    await fs.writeFile(filePath, buffer);
-
-    imagePaths.push("/uploads/" + fileName);
-  }
+  const imagePaths = data.getAll("images") as string[];
 
   await prisma.rental.create({
     data: {

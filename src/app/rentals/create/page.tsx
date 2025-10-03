@@ -1,5 +1,6 @@
 import { createRental } from "../rental.actions";
 import CategoryCombobox from "@/components/CategoryCombobox";
+import ImageGallerySelect from "@/components/ImageGallerySelect";
 
 export default function CreateRentalPage() {
   return (
@@ -157,22 +158,12 @@ export default function CreateRentalPage() {
               
               <div className="space-y-2">
                 <label htmlFor="images" className="block text-sm font-medium text-gray-700">
-                  Upload Images *
+                  Select Images *
                 </label>
-                <div className="relative">
-                  <input
-                    id="images"
-                    name="images"
-                    type="file"
-                    multiple
-                    accept="image/*"
-                    required
-                    className="w-full px-4 py-3 border-2 border-dashed border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
-                  />
-                  <p className="mt-2 text-sm text-gray-500">
-                    Upload multiple high-quality images of your property. Supported formats: JPG, PNG, WebP
-                  </p>
-                </div>
+                <ImageGallerySelect onImagesSelected={(images) => console.log(images)} />
+                <p className="mt-2 text-sm text-gray-500">
+                  Select multiple high-quality images of your property.
+                </p>
               </div>
             </div>
 
