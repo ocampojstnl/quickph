@@ -1,0 +1,63 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum UserStatus {
+  TENANT
+  LANDLORD
+}
+
+model UserType {
+  id      String     @id @default(cuid())
+  status  UserStatus @default(TENANT)
+  userId  String     @unique
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+model Rental {
+  id        String   @id @default(cuid())
+  name      String
+  description String?
+  category  String
+  address   String
+  size      Int
+  bathroom  Int
+  bedroom   Int
+  price     Float
+  imageUrls String[]  // store array of image URLs
+  userId String
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  chats     Chat[]
+}
+
+model Chat {
+  id        String   @id @default(cuid())
+  rentalId  String
+  tenantId  String
+  landlordId String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  messages  Message[]
+  rental    Rental   @relation(fields: [rentalId], references: [id], onDelete: Cascade)
+  
+  @@unique([rentalId, tenantId])
+}
+
+model Message {
+  id        String   @id @default(cuid())
+  chatId    String
+  senderId  String
+  content   String
+  fileUrl   String?  // For file attachments
+  fileName  String?  // Original file name
+  fileType  String?  // File type (image, document, etc.)
+  createdAt DateTime @default(now())
+  chat      Chat     @relation(fields: [chatId], references: [id], onDelete: Cascade)
+}
